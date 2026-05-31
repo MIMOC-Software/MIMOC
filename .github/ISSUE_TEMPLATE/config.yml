@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: MIMOC Early Access instructions
+    url: https://github.com/MIMOC-Software/mimoc/blob/main/REQUEST_EARLY_ACCESS.md
+    about: Read this before requesting access to MIMOC Community / Early Access.
