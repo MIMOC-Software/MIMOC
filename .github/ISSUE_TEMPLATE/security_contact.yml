@@ -1,0 +1,53 @@
+name: Security contact request
+description: Request a private channel to report a security concern.
+title: "Security contact request"
+labels: ["security", "needs-private-channel"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include vulnerability details, exploit steps, credentials, logs, screenshots or sensitive data in this public issue.
+
+        Use this form only to request a private channel for security reporting.
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact reference
+      description: Provide a way to identify or reach you. Avoid posting sensitive data.
+      placeholder: "GitHub username or preferred contact reference"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Security concern category
+      options:
+        - Authentication / authorization
+        - Credential handling
+        - Data exposure
+        - Deployment / remote execution behavior
+        - Audit / logging
+        - Licensing
+        - Installer / distribution
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Non-sensitive summary
+      description: Provide a very short summary without technical exploit details.
+      placeholder: "I would like to report a potential issue related to authentication."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I confirm that I have not included technical exploit details or sensitive data in this public issue.
+          required: true
