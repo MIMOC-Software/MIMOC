@@ -1,0 +1,114 @@
+name: MIMOC Early Access request
+description: Request controlled access to MIMOC Community / Early Access builds.
+title: "MIMOC Early Access request"
+labels: ["early-access", "request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your interest in MIMOC.
+
+        Before submitting this request, please read:
+        - README.md
+        - DISCLAIMER.md
+        - SECURITY.md
+        - INSTALLATION.md
+        - REQUEST_EARLY_ACCESS.md
+
+        Do not include credentials, passwords, license files, logs with sensitive data, internal IP ranges or confidential information.
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Your name or contact reference.
+      placeholder: "John Doe"
+    validations:
+      required: true
+
+  - type: input
+    id: organization
+    attributes:
+      label: Organization / Company
+      description: Your organization or company name.
+      placeholder: "Example Ltd"
+    validations:
+      required: false
+
+  - type: input
+    id: role
+    attributes:
+      label: Role
+      placeholder: "System Administrator, IT Consultant, Infrastructure Owner..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: intended_use
+    attributes:
+      label: Intended use
+      multiple: true
+      options:
+        - Lab / test environment
+        - Internal IT evaluation
+        - Small production pilot
+        - Documentation review only
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: asset_count
+    attributes:
+      label: Approximate number of assets
+      options:
+        - 1-50
+        - 51-200
+        - 201-1000
+        - 1000+
+        - Not sure yet
+    validations:
+      required: true
+
+  - type: dropdown
+    id: features
+    attributes:
+      label: Main features of interest
+      multiple: true
+      options:
+        - Network Discovery
+        - Inventory / CMDB
+        - WMI Discovery
+        - Software Scanner
+        - Power Manager
+        - Software Deployment
+        - Task Scheduler
+        - Credential Vault
+        - Backup / Restore
+        - Maintenance Mode
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Briefly describe your evaluation scenario. Do not include sensitive infrastructure details.
+      placeholder: "I would like to test MIMOC in a lab with a small Windows network..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I will use MIMOC only on systems and networks where I have authorization.
+          required: true
+        - label: I understand that Early Access builds may contain defects, incomplete features or behavior that changes between versions.
+          required: true
+        - label: I will not share installers, licenses, private links or internal builds publicly.
+          required: true
+        - label: I will not post credentials, sensitive logs, license files or private infrastructure data in public issues.
+          required: true
