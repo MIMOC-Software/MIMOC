@@ -88,3 +88,45 @@ To request access to the Community / Early Access build, open an issue with the 
 
 ```text
 MIMOC Early Access request
+```
+
+Do not include passwords, credentials, sensitive logs, public IP addresses or confidential data in public issues.
+
+---
+
+## Security
+
+Do not open public issues containing vulnerability details or sensitive security information.
+
+Open a generic issue stating that you would like to report a security concern. A private communication channel will be arranged for the technical details.
+
+---
+
+## Documentation
+
+User and technical documentation will be published progressively in this repository.
+
+Planned documents include:
+
+- user manual;
+- requirements and sizing guide;
+- installation guide;
+- changelog;
+- release notes;
+- operational disclaimer.
+
+---
+
+## License
+
+MIMOC is not open source.
+
+This public repository contains documentation, product notes and informational material only.  
+Source code, installers and licensing tools are not included.
+
+---
+
+## Copyright
+
+Copyright © Mirko Bongiovanni.  
+All rights reserved.
